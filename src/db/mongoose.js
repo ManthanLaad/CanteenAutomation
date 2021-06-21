@@ -7,5 +7,10 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log("Success"))
-  .catch((e) => console.log(`Failed Connection :${e}`));
+  .then(() => {
+    console.log("Database Connection Successful");
+    // Rename the collection
+    // let db = mongoose.connection.db;
+    // db.collection("menu").rename("menus");
+  })
+  .catch((e) => console.log(`Database Connection Failed :${e}`));
